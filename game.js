@@ -17,8 +17,13 @@ const checkDead=()=>{
     if(blockLeft < 20 && blockLeft > 0 && characterTop >= 130){
         block.style.animation='none'
         block.style.display='none'
-        alert('you lose')
+        if(confirm('you loose, you want to restart the game ?')){
+         location.reload()
+        }else{
+            //
+        }
     }
     },1)
 }
+
 checkDead()
